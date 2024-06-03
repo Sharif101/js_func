@@ -4,5 +4,4 @@ var lines = input.split("\n");
 let π = 3.14159;
 let R = Number(lines.shift());
 let A = (π * Math.pow(R, 2)).toFixed(4);
-console.log("A=", A);
-console.log("\n");
+console.log("A=" + A);
