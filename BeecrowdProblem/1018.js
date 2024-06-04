@@ -9,7 +9,8 @@ function banknotespos(note, value) {
     const element = note[i];
     let notecount = Math.floor(value / element);
     value -= element * notecount;
-    console.log(`${notecount} nota(s) de R$ ${element.toFixed(2)}`);
+    console.log(`${notecount} nota(s) de R$ ${element.toFixed(2).split(".")}`);
   }
+  console.log("\n");
 }
 banknotespos(banknotes, tk);
