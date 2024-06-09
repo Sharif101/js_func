@@ -1,10 +1,20 @@
-function result(A, B, C) {
-  if (B + C > A && A + B > C && A + C > B) {
-    let p = parseFloat(A + B + C);
-    return `Perimetro = ${p.toFixed(1)}`;
+var input = require("fs").readFileSync("./BeecrowdProblem/input.txt", "utf8");
+var lines = input.split("\n");
+
+let values = lines[0].split(" ");
+let x = parseFloat(values[0]);
+let y = parseFloat(values[1]);
+let z = parseFloat(values[2]);
+
+function result(a, b, c) {
+  if (a + b > c && a + c > b && b + c > a) {
+    // The sides form a triangle
+    const perimeter = a + b + c;
+    console.log(`Perimetro = ${perimeter.toFixed(1)}`);
   } else {
-    let area = ((A + B) * C) / 2;
-    return `Area = ${area.toFixed(1)}`;
+    // The sides form a trapezoid
+    const area = ((a + b) * c) / 2;
+    console.log(`Area = ${area.toFixed(1)}`);
   }
 }
-console.log(result(6.0, 4.0, 2.1));
+result(x, y, z);

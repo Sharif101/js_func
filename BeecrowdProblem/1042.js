@@ -3,9 +3,9 @@ var lines = input.split("\n");
 
 let values = lines[0].split(" ");
 
-let x = parseInt(values[0]);
-let y = parseInt(values[1]);
-let z = parseInt(values[2]);
+let x = values[0];
+let y = values[1];
+let z = values[2];
 
 function assending(a, b, c) {
   let arry = [a, b, c];
@@ -14,7 +14,6 @@ function assending(a, b, c) {
   let finalAssing = assing.join("\n");
   let input = `\n${a}\n${b}\n${c}`;
 
-  return `${finalAssing} \n${input}`;
+  console.log(`${finalAssing} \n${input}`);
 }
-
-console.log(assending(x, y, z));
+assending(x, y, z);
